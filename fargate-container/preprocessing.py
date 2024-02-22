@@ -7,7 +7,7 @@ import boto3
  
 s3 = boto3.client('s3')
 s3_bucket = os.environ['BUCKET_NAME']
-file_key = os.environ['FILE_KEY']
+pdf_file_key = os.environ['FILE_KEY']
 local_pdf_file_path = '/tmp/downloaded_file.pdf'  # Use /tmp directory in Lambda for temporary files
 
 if __name__ == "__main__":
