@@ -21,4 +21,4 @@ if __name__ == "__main__":
         "body" : {"message": "Hello from Fargate", "list" : elements}
     }
 
-    print(json.dumps(response))
+    print(response)
