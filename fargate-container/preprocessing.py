@@ -12,7 +12,7 @@ local_pdf_file_path = '/tmp/downloaded_file.pdf'  # Use /tmp directory in Lambda
 
 if __name__ == "__main__":
     # Download the PDF file from S3
-    s3_client.download_file(s3_bucket, pdf_file_key, local_pdf_file_path)
+    s3.download_file(s3_bucket, pdf_file_key, local_pdf_file_path)
 
     elements = partition_pdf(local_pdf_file_path, strategy='hi_res', include_page_breaks=True, languages=['deu'])
     
