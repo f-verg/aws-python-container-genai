@@ -10,8 +10,6 @@ COPY . /app
 RUN apt-get update -y && apt-get upgrade -y
 RUN apt-get install poppler-utils -y
 
-# RUN yum -y install libgl1-mesa-glx libglib2.0-0 ffmpeg libsm6 libxext6 libglvnd-glx
-
 # Install any needed packages specified in requirements.txt
 RUN pip install --no-cache-dir -r requirements.txt
 RUN pip install -U "unstructured[pdf]" "unstructured-inference"
