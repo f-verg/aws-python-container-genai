@@ -8,7 +8,7 @@ WORKDIR /app
 COPY . /app
 
 RUN apt-get update -y && apt-get upgrade -y
-RUN apt-get install poppler-utils tesseract-ocr -y
+RUN apt-get install poppler-utils tesseract-ocr tesseract-ocr-deu -y
 
 # Install any needed packages specified in requirements.txt
 RUN pip install --no-cache-dir -r requirements.txt
